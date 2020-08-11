@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PageContorller@homefun')->name("home");
-
-Route::get('/about', 'PageContorller@aboutfun')->name("about");
-
-Route::get('/contact', 'PageContorller@contactfun')->name("contact");
-
-Route::get('/post', 'PageContorller@postfun')->name("post");
+Route::get('/', function () {
+    return view('welcome');
+});
